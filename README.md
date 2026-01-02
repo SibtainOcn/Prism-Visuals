@@ -9,14 +9,25 @@
 
 
 
-## Features
+## Installation Note
+
+When running the installer, Windows SmartScreen may show a warning:
+"Windows protected your PC - Unknown publisher"
+
+**This is normal for new software.** To install:
+
+1. Click **"More info"**
+2. Click **"Run anyway"**
+
+The software is safe and open-source. You can review the code before installing.
+
+**Why this happens:** The installer isn't code-signed yet (costs $300+/year). 
+As more people download it, Windows will build trust automatically.
 
 
 
 
 ## Quick Start
-
-
 
 
 ## Commands
