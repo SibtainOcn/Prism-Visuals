@@ -7,13 +7,13 @@
 
 ![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)
 
----
+
 
 ## Features
 
 
 
----
+
 ## Quick Start
 
 
@@ -35,7 +35,7 @@ When in interactive mode, you'll see a prompt like this where you can enter comm
 | `visuals exit` | - | Exit program |
 | `visuals` | - | Interactive mode |
 
----
+
 
 
 
