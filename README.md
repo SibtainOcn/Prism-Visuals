@@ -7,46 +7,40 @@
 
 ![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)
 
+---
 
-
-## Installation Note
-
-When running the installer, Windows SmartScreen may show a warning:
-"Windows protected your PC - Unknown publisher"
-
-**This is normal for new software.** To install:
-
-1. Click **"More info"**
-2. Click **"Run anyway"**
-
-The software is safe and open-source. You can review the code before installing.
-
-**Why this happens:** The installer isn't code-signed yet (costs $300+/year). 
-As more people download it, Windows will build trust automatically.
+## Features
 
 
 
-
+---
 ## Quick Start
+
+Simply run `visuals` to see the **Main Menu** with quick commands and hints.
+
 
 
 ## Commands
 
-When in interactive mode, you'll see a prompt like this where you can enter commands directly without the `visuals` prefix:
+> **Note:** Commands are case-insensitive. `visuals Fetch`, `visuals FETCH`, and `visuals fetch` all work.
 
+### Full Command Reference
 
-| Command | Shortcut | Description |
-|---------|----------|-------------|
-| `visuals fetch` | `f` | Download wallpapers from current source |
-| `visuals change` | `c` | Choose & set wallpaper |
-| `visuals open` | `o` | Open wallpaper folder |
-| `visuals source` | `src` | Switch source (Bing/Unsplash) |
-| `visuals reset` | `r` | Reset all settings to default |
-| `visuals help` | `h, q`, | Show this help |
-| `visuals exit` | - | Exit program |
-| `visuals` | - | Interactive mode |
+| Category | Command | Shortcut | Description |
+|----------|---------|----------|-------------|
+| **Core** | `fetch` | `f` | Download wallpapers |
+| | `change` | `c` | Choose & set wallpaper |
+| | `open` | `o` | Open wallpaper folder |
+| | `source` | `src` | Switch source (Bing/Unsplash) |
+| | `reset` | `r` | Reset all settings |
+| **Schedule** | `set` | `s` | Enable auto-change schedule |
+| | `unset` | `un` | Disable auto-change |
+| | `status` | `st` | Check schedule status |
+| **System** | `help` | `h`, `?` | Show full help |
+| | `menu` | `v`, `m`, `visuals` | Show main menu |
+| | `exit` | `q` | Exit program |
 
-
+---
 
 
 
@@ -58,23 +52,22 @@ When in interactive mode, you'll see a prompt like this where you can enter comm
 
 ### Interactive Mode
 ```bash
-# Run without arguments
+# Run without arguments - shows Main Menu by default
+visuals
 
-
-`
 +------------------------------------------+
 | >    YOUR COMMAND HERE                   |
 +------------------------------------------+
-`
 
-# Use shortcuts
+# Use shortcuts (with brief spinner feedback)
 > f     # fetch
 > c     # change
 > o     # open folder
 > src   # source setup
+> s     # schedule auto-change
+> h     # full help
+> v     # main menu
 > q     # exit
-> r     # RESET EVERYTHING to default
-> h      # help
 
 ```
 
@@ -153,6 +146,29 @@ Toggle between Bing (daily curated) and Unsplash (themed) wallpaper sources.
 
 ---
 
+## Auto-Change Wallpapers
+
+Automatically rotate your desktop wallpapers on a schedule.
+
+| Command | Shortcut | Description |
+|---------|----------|-------------|
+| `visuals set` | `s` | Enable auto-change schedule |
+| `visuals unset` | `un` | Disable auto-change |
+| `visuals status` | `st` | Check schedule status |
+
+
+
+### Scheduling Options
+| Option | Frequency |
+|--------|----------|
+| Daily | At specific time (e.g., 9:00 AM) |
+| Every 6 hours | 4 times per day |
+| Every 3 hours | 8 times per day |
+| Hourly | Every hour |
+| Custom | 1-24 hours interval |
+
+---
+
 ## FAQ
 
 **Q: Does it automatically change wallpapers?**  
@@ -174,16 +190,6 @@ A: `%USERPROFILE%\Pictures\Prism Visuals\`
 A: No, the tool works without administrator privileges.
 
 ---
-
-## Technical Details
-
-### Dependencies
-- `reqwest` - HTTP client
-- `serde` / `serde_json` - Configuration management
-- `chrono` - Date/time handling
-- `colored` - Terminal colors
-- `urlencoding` - URL encoding
-- `windows` - Windows API integration
 
 
 ---
