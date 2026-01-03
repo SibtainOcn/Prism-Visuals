@@ -1,6 +1,6 @@
 # Prism Visuals CLI
 
-**A professional CLI tool for downloading and managing high-quality wallpapers automatically**
+**A lightweight and efficient CLI tool for managing high-quality wallpapers**
 
 ![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg)
 ![License](https://img.shields.io/badge/license-Proprietary-red.svg)
