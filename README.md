@@ -62,7 +62,7 @@ Choose from 4 wallpaper sources:
 
 > *You can search your desire imgs from Wallhaven, Unsplash, Pexels*
 
-> *First run `src` to set your API key then run `fetch` to download imgs*
+> *First run `src` then run `fetch` to download imgs*
 
 > **Note:** *API keys are free to get from their respective websites* -
 > *limits apply.*
