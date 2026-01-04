@@ -156,8 +156,7 @@ A: Yes! Switch between them using `visuals source`.
 **Q: Where are wallpapers stored?**  
 A: `%USERPROFILE%\Pictures\Prism Visuals\`
 
-**Q: Do I need admin rights?**  
-A: No, the tool works without administrator privileges.
+
 
 ---
 
