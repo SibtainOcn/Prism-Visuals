@@ -1,53 +1,22 @@
-# Prism Visuals CLI
+# Visuals CLI
 
-**A lightweight and efficient CLI tool for managing high-quality wallpapers**
+**A fast, minimal CLI built to refresh your desktop effortlessly**
 
 ![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg)
 ![License](https://img.shields.io/badge/license-Proprietary-red.svg)
 
 ![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)
 
----
+
 
 ## Features
 
 
 
----
+
 ## Quick Start
 
-Simply run `visuals` to see the **Main Menu** with quick commands and hints.
-
-
-
-## Commands
-
-> **Note:** Commands are case-insensitive. `visuals Fetch`, `visuals FETCH`, and `visuals fetch` all work.
-
-### Full Command Reference
-
-| Category | Command | Shortcut | Description |
-|----------|---------|----------|-------------|
-| **Core** | `fetch` | `f` | Download wallpapers |
-| | `change` | `c` | Choose & set wallpaper |
-| | `open` | `o` | Open wallpaper folder |
-| | `source` | `src` | Switch source (Bing/Unsplash) |
-| | `reset` | `r` | Reset all settings |
-| **Schedule** | `set` | `s` | Enable auto-change schedule |
-| | `unset` | `un` | Disable auto-change |
-| | `status` | `st` | Check schedule status |
-| **System** | `help` | `h`, `?` | Show full help |
-| | `menu` | `v`, `m`, `visuals` | Show main menu |
-| | `exit` | `q` | Exit program |
-
----
-
-
-
-
-
-
-### Simply open powershell and RUN `visuals` 
+> OPEN POWERSHELL and run `visuals` to see the **Main Menu** 
 
 
 ### Interactive Mode
@@ -59,7 +28,7 @@ visuals
 | >    YOUR COMMAND HERE                   |
 +------------------------------------------+
 
-# Use shortcuts (with brief spinner feedback)
+
 > f     # fetch
 > c     # change
 > o     # open folder
@@ -80,75 +49,47 @@ visuals
 ```bash
 visuals source
 ```
-Toggle between Bing (daily curated) and Unsplash (themed) wallpaper sources.
+Choose from 4 wallpaper sources:
+
+| Source | API Key | Best For |
+|--------|---------|----------|
+| **Bing** | Not needed | Daily hand-picked visuals |
+| **Wallhaven** | Not needed | Exploring diverse styles |
+| **Unsplash** | Required | Curated aesthetics & moods |
+| **Pexels** | Required | High quality premium visuals |
+
+----
+
+> *You can search your desire imgs from Wallhaven, Unsplash, Pexels*
+
+> *First run `src` to set your API key then run `fetch` to download imgs*
+
+> **Note:** *API keys are free to get from their respective websites* -
+> *limits apply.*
 
 
-### Bing Source
-1. Checks last 8 days for new images
-2. Downloads only new/unique images (hash-based)
-3. Automatically goes to archive (-7, -14, -21 days) if no new images
-4. Resets to latest when new images appear
+### Full Command Reference
 
-### Unsplash Source
-1. Prompts for theme (or random)
-2. Prompts for image count (5-30)
-3. Prompts for sort method:
-   - **Relevance**: Most popular/best quality (default)
-   - **Latest**: Newest photos first
-   - **Random**: Truly random selection
-4. Downloads selected images
-5. Tracks rate limit usage
-
----
-
-## Sort Options Explained
-
-### Relevance (Recommended)
-- Returns most popular and highest quality images
-- Best match for your search theme
-- Consistently beautiful results
+| Category | Command | Shortcut | Description |
+|----------|---------|----------|-------------|
+| **Core** | `fetch` | `f` | Download wallpapers |
+| | `change` | `c` | Choose & set wallpaper |
+| | `open` | `o` | Open wallpaper folder |
+| | `source` | `src` | Switch source (4 options) |
+| | `reset` | `r` | Reset all settings |
+| | `rm` | - | Reset current source API key only |
+| **Schedule** | `set` | `s` | Enable auto-change schedule |
+| | `unset` | `un` | Disable auto-change |
+| | `status` | `ss` | Check schedule status |
+| **System** | `help` | `h`, `?` | Show full help |
+| | `menu` | `v`, `m`, `visuals` | Show main menu |
+| | `update` | - | Check & install updates |
+| | `exit` | `q` | Exit program |
 
 
-### Latest
-- Returns newest photos first
-- Fresh content from recent uploads
-- Modern aesthetics
-- Good for trending themes
+> ## For autochange  
 
-### Random
-- Truly random selection from all time periods
-- Variety across different eras
-- Good for discovering hidden gems
-
-
----
-
-## Troubleshooting
-
-### "Invalid Unsplash API key"
-- Verify your API key is correct
-- Get a new key at [Unsplash Developers](https://unsplash.com/developers)
-- Set it using: `fetch YOUR_KEY`
-
-### "Rate limit exceeded"
-- MODE allows 50 requests/hour
-- Wait 1 hour before trying again
-- for paid api key 5,000 requests/hour  [Unsplash Developers](https://unsplash.com/developers)
-
-### "No photos found for this theme"
-- Try a different theme
-- Use "random" for general wallpapers
-- Check your internet connection
-
-### "Cannot find Pictures directory"
-- Ensure `%USERPROFILE%\Pictures` exists
-- Create it manually if needed
-
----
-
-## Auto-Change Wallpapers
-
-Automatically rotate your desktop wallpapers on a schedule.
+Automatically refresh your desktop wallpapers on a schedule.
 
 | Command | Shortcut | Description |
 |---------|----------|-------------|
@@ -166,6 +107,35 @@ Automatically rotate your desktop wallpapers on a schedule.
 | Every 3 hours | 8 times per day |
 | Hourly | Every hour |
 | Custom | 1-24 hours interval |
+
+## Troubleshooting
+
+### "Invalid API key" (Unsplash/Pexels)
+- Verify your API key is correct
+- Use **`rm`** command to clear and reset your API key
+- Get a new key:
+  - Unsplash: [unsplash.com/developers](https://unsplash.com/developers)
+  - Pexels: [pexels.com/api](https://www.pexels.com/api/new/)
+- Then run `src` to set the new key
+
+### "Rate limit exceeded"
+- Unsplash: 50 requests/hour (wait 1 hour)
+- Pexels: 200 requests/hour (wait 1 hour)
+- Wallhaven: 45 requests/minute (wait 1 minute)
+- Bing: 8 images/day (wait until next day)
+
+### "No photos found for this theme"
+- Try a different theme
+- Use "random" for general wallpapers
+- Check your internet connection
+
+### "Cannot find Pictures directory"
+- Ensure `%USERPROFILE%\Pictures` exists
+- Create it manually if needed
+
+
+
+
 
 ---
 
