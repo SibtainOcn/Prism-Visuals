@@ -1,0 +1,33 @@
+# Rust build artifacts
+target/
+Cargo.lock
+
+# Installer output
+installer_output/
+*.msi
+*.wixobj
+*.wixpdb
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Git backup (if you created one)
+git_backup/
+
+# Personal config (if any)
+config.json

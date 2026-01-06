@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  Copyright (C) 2025 SibtainOcn
+  WiX v5 Installer for Prism Visuals
+-->
+
+<Wix xmlns='http://wixtoolset.org/schemas/v4/wxs'
+     xmlns:ui='http://wixtoolset.org/schemas/v4/wxs/ui'>
+    <Package
+        Name='Prism Visuals'
+        Manufacturer='SibtainOcn'
+        Version='1.2.6'
+        UpgradeCode='12345678-1234-1234-1234-123456789012'>
+        
+        <MajorUpgrade
+            DowngradeErrorMessage='A newer version is already installed.' />
+
+        <Media Id='1' Cabinet='media1.cab' EmbedCab='yes' />
+
+        <!-- Installation Directory Structure -->
+        <StandardDirectory Id='ProgramFiles6432Folder'>
+            <Directory Id='MANUFACTURERFOLDER' Name='Prism Visuals'>
+                <Directory Id='INSTALLFOLDER' Name='Prism Visuals'>
+                    <!-- Main executable -->
+                    <Component Id='MainExecutable' Guid='11111111-1111-1111-1111-111111111111'>
+                        <File
+                            Id='VisualsEXE'
+                            Source='target\release\visuals.exe'
+                            KeyPath='yes' />
+                    </Component>
+                    
+                    <!-- Add to System PATH -->
+                    <Component Id='PATH' Guid='87654321-4321-4321-4321-210987654321'>
+                        <Environment
+                            Id='PATH'
+                            Name='PATH'
+                            Value='[INSTALLFOLDER]'
+                            Permanent='no'
+                            Action='set'
+                            System='yes'
+                            Part='last' />
+                        <CreateFolder />
+                    </Component>
+                </Directory>
+            </Directory>
+        </StandardDirectory>
+
+        <!-- Start Menu shortcuts -->
+        <StandardDirectory Id="ProgramMenuFolder">
+            <Directory Id="ApplicationProgramsFolder" Name="Prism Visuals">
+                <Component Id="ApplicationShortcut" Guid="33333333-3333-3333-3333-333333333333">
+                    <Shortcut
+                        Id="ApplicationStartMenuShortcut"
+                        Name="Prism Visuals"
+                        Description="Download and manage Bing wallpapers"
+                        Target="[INSTALLFOLDER]visuals.exe"
+                        Arguments="help"
+                        WorkingDirectory="INSTALLFOLDER" />
+                    <RemoveFolder Id="CleanUpShortCut" On="uninstall" />
+                    <RegistryValue
+                        Root="HKCU"
+                        Key="Software\SibtainOcn\Prism Visuals"
+                        Name="installed"
+                        Type="integer"
+                        Value="1"
+                        KeyPath="yes" />
+                </Component>
+            </Directory>
+        </StandardDirectory>
+
+        <!-- Define what gets installed -->
+        <Feature Id='MainProgram' Title='Prism Visuals' Level='1'>
+            <ComponentRef Id='MainExecutable' />
+            <ComponentRef Id='PATH' />
+            <ComponentRef Id='ApplicationShortcut' />
+        </Feature>
+
+        <!-- ============================================ -->
+        <!-- CUSTOMIZATION: License & Images             -->
+        <!-- ============================================ -->
+        
+        <!-- Custom License Agreement -->
+        <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+        
+        <!-- Custom Banner Image (493 x 58 pixels, BMP format) -->
+        <!-- Banner removed - using default -->
+        
+        <!-- Custom Dialog Background (493 x 312 pixels, BMP format) -->
+        <WixVariable Id="WixUIDialogBmp" Value="dialog.bmp" />
+
+        <!-- UI Configuration -->
+        <ui:WixUI Id="WixUI_InstallDir" />
+        <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+
+        <!-- Custom Action to remove scheduled task on uninstall (silent, no UI) -->
+        <CustomAction Id="RemoveScheduledTask" 
+                      Directory="INSTALLFOLDER"
+                      ExeCommand="&quot;[INSTALLFOLDER]visuals.exe&quot; silent-uninstall"
+                      Execute="deferred"
+                      Return="ignore"
+                      Impersonate="yes" />
+
+        <InstallExecuteSequence>
+            <Custom Action="RemoveScheduledTask" Before="RemoveFiles" Condition="REMOVE=&quot;ALL&quot;" />
+        </InstallExecuteSequence>
+    </Package>
+</Wix>
