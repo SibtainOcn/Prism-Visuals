@@ -4,14 +4,14 @@
 
 **Transform your desktop with stunning wallpapers from the world's best sources**
 
-[![Version](https://img.shields.io/badge/version-1.2.3-blue.svg?style=for-the-badge)](https://github.com/SibtainOcn/Prism-Visuals/releases)
+[![Version](https://img.shields.io/badge/version-1.2.6-blue.svg?style=for-the-badge)](https://github.com/SibtainOcn/Prism-Visuals/releases)
 [![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg?style=for-the-badge&logo=rust)](https://www.rust-lang.org/)
 [![Windows](https://img.shields.io/badge/windows-10%2F11-0078D6.svg?style=for-the-badge&logo=windows)](https://www.microsoft.com/windows)
 [![License](https://img.shields.io/badge/license-Proprietary-red.svg?style=for-the-badge)](LICENSE)
 
-[![Downloads](https://img.shields.io/github/downloads/SibtainOcn/Prism-Visuals/total.svg?style=for-the-badge&color=success)](https://github.com/SibtainOcn/Prism-Visuals/releases)
-[![Stars](https://img.shields.io/github/stars/SibtainOcn/Prism-Visuals?style=for-the-badge&color=yellow)](https://github.com/SibtainOcn/Prism-Visuals)
-[![Release](https://img.shields.io/github/release/SibtainOcn/Prism-Visuals.svg?style=for-the-badge&color=purple)](https://github.com/SibtainOcn/Prism-Visuals/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/SibtainOcn/Prism-Visuals/total.svg?style=for-the-badge&color=success&cacheSeconds=60)](https://github.com/SibtainOcn/Prism-Visuals/releases)
+[![Stars](https://img.shields.io/github/stars/SibtainOcn/Prism-Visuals?style=for-the-badge&color=yellow&cacheSeconds=60)](https://github.com/SibtainOcn/Prism-Visuals)
+[![Release](https://img.shields.io/github/v/release/SibtainOcn/Prism-Visuals?style=for-the-badge&color=purple&cacheSeconds=60)](https://github.com/SibtainOcn/Prism-Visuals/releases/latest)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-☕-FFDD00?style=for-the-badge)](https://buymeacoffee.com/SibtainOcn)
 
 ---
