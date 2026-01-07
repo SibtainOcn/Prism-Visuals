@@ -2,7 +2,7 @@
 
 #  Prism Visuals
 
-**Transform your screeb with stunning visuals from the world's best sources**
+**A powerful CLI tool for discovering, managing, and automating stunning visuals from multiple premium sources**
 
 [![Version](https://img.shields.io/badge/version-1.2.6-blue.svg?style=for-the-badge)](https://github.com/SibtainOcn/Prism-Visuals/releases)
 [![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg?style=for-the-badge&logo=rust)](https://www.rust-lang.org/)
@@ -31,15 +31,17 @@
 visuals
 ```
 
-## quick commands
-```
-> f      # Fetch new wallpapers
-> c      # Change current wallpaper
-> s      # Setup auto-change schedule
-> src    # Switch wallpaper source
-> h      # Full help
-> exit   # Exit program
-```
+## Quick Commands
+
+| Command | Description |
+|:-------:|-------------|
+| `f` | Fetch new wallpapers |
+| `c` | Change current wallpaper |
+| `s` | Setup auto-change schedule |
+| `src` | Switch wallpaper source |
+| `h` | Full help |
+| `exit` | Exit program |
+
 > 💡 Run `visuals help` or just `h` in the CLI for the complete command reference with examples.
 ---
 ### When to Use What
@@ -57,7 +59,8 @@ visuals
 | **Wallhaven** | `Free` | 45/min | HD wallpaper variety |
 | **Unsplash** | `Required` | 50/hr | Themed photography |
 | **Pexels** | `Required` | 200/hr | Professional quality |
-> *Note : All api keys have free tier rate limits* 
+> *Note : All api keys have free tier rate limits*  
+>  **Need API keys?** → [API Setup Guide](docs/API_SETUP.md) 
 
 
 
