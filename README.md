@@ -2,7 +2,7 @@
 
 #  Prism Visuals
 
-**Transform your desktop with stunning wallpapers from the world's best sources**
+**Transform your screeb with stunning visuals from the world's best sources**
 
 [![Version](https://img.shields.io/badge/version-1.2.6-blue.svg?style=for-the-badge)](https://github.com/SibtainOcn/Prism-Visuals/releases)
 [![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg?style=for-the-badge&logo=rust)](https://www.rust-lang.org/)
