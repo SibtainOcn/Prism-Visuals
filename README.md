@@ -31,7 +31,7 @@
 visuals
 ```
 
-### quick commands
+## quick commands
 ```
 > f      # Fetch new wallpapers
 > c      # Change current wallpaper
@@ -40,10 +40,15 @@ visuals
 > h      # Full help
 > exit   # Exit program
 ```
-
+> 💡 Run `visuals help` or just `h` in the CLI for the complete command reference with examples.
 ---
+### When to Use What
 
-## Sources
+>  **Just want amazing visuals automatically?** → Run `src` then `f` and search , it will automatically save in your system.  
+>  **Want to pick specific visuals you like?** → Run `p` - browse accross 4 different sources and just paste the link to save img 
+
+
+## For direct download from sources
 
 | Source | API Key | Rate Limit | Best For |
 |--------|:-------:|:----------:|----------|
@@ -52,42 +57,18 @@ visuals
 | **Wallhaven** | `Free` | 45/min | HD wallpaper variety |
 | **Unsplash** | `Required` | 50/hr | Themed photography |
 | **Pexels** | `Required` | 200/hr | Professional quality |
+> *Note : All api keys have free tier rate limits* 
 
-> **Tip:** Start with Spotlight or Wallhaven - no setup required!
 
-### When to Use What
 
-| Use Case | Best Source |
-|----------|-------------|
-| Just want beautiful wallpapers automatically | **Spotlight** (`f`) |
-| Want to pick specific images you like | **Universal Pick** (`p`) - 4 sources! |
-| Want variety with tags/themes, no API key | **Wallhaven** |
-| Want themed photography (nature, city) | **Unsplash** |
-| Want professional studio-quality photos | **Pexels** |
 
-> **Pick Mode** (`p`) opens browser + CLI for manual browsing from any of 4 sources - no API keys needed!
 
----
-
-## Commands
-
-| Category | Command | Shortcut | Description |
-|----------|---------|:--------:|-------------|
-| **Core** | `fetch` | `f` | Download wallpapers |
-| | `change` | `c` | Choose & set wallpaper |
-| | `open` | `o` | Open wallpaper folder |
-| | `source` | `src` | Switch source |
-| **Schedule** | `set` | `s` | Enable auto-change |
-| | `unset` | `un` | Disable auto-change |
-| | `status` | `ss` | Check schedule |
-| **Archive** | `pick` | `p` | Download from Spotlight Archive |
-| **System** | `help` | `h` | Show help |
-| | `exit` | `quit` | Exit program |
-| | `0` | - | Go back (in menus) |
-
----
 
 ## Auto-Change Schedule
+
+> 💡 Auto-change uses your currently selected source. Change source anytime with `src` command!
+
+
 
 | Frequency | Description |
 |-----------|-------------|
@@ -101,7 +82,6 @@ visuals status # Check schedule
 visuals unset  # Disable
 ```
 
-> **[INFO]** Auto-change uses your currently selected source. Change source anytime with `src` command!
 
 ---
 
